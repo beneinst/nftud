@@ -114,9 +114,17 @@ Uri: http://192.168.1.158/images/2024/07/08/copertina-di-facebook776.jpg
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\08\copertina-di-facebook776.jpg
 Content Type: image/jpeg
 
+Uri: http://192.168.1.158/images/2024/07/08/ebook.png
+File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\08\ebook.png
+Content Type: image/png
+
 Uri: http://192.168.1.158/images/22w.png
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\22w.png
 Content Type: image/png
+
+Uri: http://192.168.1.158/images/Asap-Regular.ttf
+File Name: C:\Downloaded Web Sites\192.168.1.158\images\Asap-Regular.ttf
+Content Type: font/ttf
 
 Uri: http://192.168.1.158/images/componenti/1.jpg
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\componenti\1.jpg
@@ -138,10 +146,6 @@ Uri: http://192.168.1.158/images/favicon.ico
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\favicon.ico
 Content Type: image/x-icon
 
-Uri: http://192.168.1.158/images/Quenda-Medium.otf
-File Name: C:\Downloaded Web Sites\192.168.1.158\images\Quenda-Medium.otf
-Content Type: font/otf
-
 Uri: http://192.168.1.158/index.php/
 File Name: C:\Downloaded Web Sites\192.168.1.158\index.php\index.htm
 Content Type: text/html
@@ -150,7 +154,7 @@ Uri: http://192.168.1.158/media/legacy/js/jquery-noconflict.min.js?504da4
 File Name: C:\Downloaded Web Sites\192.168.1.158\media\legacy\js\jquery-noconflict.min.js
 Content Type: text/javascript
 
-Uri: http://192.168.1.158/media/system/css/joomla-fontawesome.min.css?55a4a3
+Uri: http://192.168.1.158/media/system/css/joomla-fontawesome.min.css?877b7e
 File Name: C:\Downloaded Web Sites\192.168.1.158\media\system\css\joomla-fontawesome.min.css
 Content Type: text/css
 
