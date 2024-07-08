@@ -154,7 +154,7 @@ Uri: http://192.168.1.158/media/legacy/js/jquery-noconflict.min.js?504da4
 File Name: C:\Downloaded Web Sites\192.168.1.158\media\legacy\js\jquery-noconflict.min.js
 Content Type: text/javascript
 
-Uri: http://192.168.1.158/media/system/css/joomla-fontawesome.min.css?a51498
+Uri: http://192.168.1.158/media/system/css/joomla-fontawesome.min.css?f89ec5
 File Name: C:\Downloaded Web Sites\192.168.1.158\media\system\css\joomla-fontawesome.min.css
 Content Type: text/css
 
