@@ -126,10 +126,6 @@ Uri: http://192.168.1.158/images/Asap-Regular.ttf
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\Asap-Regular.ttf
 Content Type: font/ttf
 
-Uri: http://192.168.1.158/images/componenti/1.jpg
-File Name: C:\Downloaded Web Sites\192.168.1.158\images\componenti\1.jpg
-Content Type: image/jpeg
-
 Uri: http://192.168.1.158/images/componenti/qwe1b.png
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\componenti\qwe1b.png
 Content Type: image/png
