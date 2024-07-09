@@ -78,9 +78,9 @@ Uri: http://192.168.1.158/images/2024/07/07/1.jpg
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\07\1.jpg
 Content Type: image/jpeg
 
-Uri: http://192.168.1.158/images/2024/07/07/bannerll.jpg
-File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\07\bannerll.jpg
-Content Type: image/jpeg
+Uri: http://192.168.1.158/images/2024/07/07/does6k.png
+File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\07\does6k.png
+Content Type: image/png
 
 Uri: http://192.168.1.158/images/2024/07/07/rounded-in-photoretrica-54.png
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\07\rounded-in-photoretrica-54.png
