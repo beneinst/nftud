@@ -74,18 +74,6 @@ Uri: http://192.168.1.158/images/13j.png
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\13j.png
 Content Type: image/png
 
-Uri: http://192.168.1.158/images/2024/07/07/1.jpg
-File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\07\1.jpg
-Content Type: image/jpeg
-
-Uri: http://192.168.1.158/images/2024/07/07/does6k.png
-File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\07\does6k.png
-Content Type: image/png
-
-Uri: http://192.168.1.158/images/2024/07/07/rounded-in-photoretrica-54.png
-File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\07\rounded-in-photoretrica-54.png
-Content Type: image/png
-
 Uri: http://192.168.1.158/images/2024/07/07/sfondo2titolopg3.png
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\07\sfondo2titolopg3.png
 Content Type: image/png
@@ -114,8 +102,16 @@ Uri: http://192.168.1.158/images/2024/07/08/copertina-di-facebook776.jpg
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\08\copertina-di-facebook776.jpg
 Content Type: image/jpeg
 
-Uri: http://192.168.1.158/images/2024/07/08/ebook.png
-File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\08\ebook.png
+Uri: http://192.168.1.158/images/2024/07/08/diari_main1.png
+File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\08\diari_main1.png
+Content Type: image/png
+
+Uri: http://192.168.1.158/images/2024/07/09/ddtyrtre.jpg
+File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\09\ddtyrtre.jpg
+Content Type: image/jpeg
+
+Uri: http://192.168.1.158/images/2024/07/09/homenft.png
+File Name: C:\Downloaded Web Sites\192.168.1.158\images\2024\07\09\homenft.png
 Content Type: image/png
 
 Uri: http://192.168.1.158/images/22w.png
@@ -126,9 +122,21 @@ Uri: http://192.168.1.158/images/Asap-Regular.ttf
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\Asap-Regular.ttf
 Content Type: font/ttf
 
+Uri: http://192.168.1.158/images/componenti/1.jpg
+File Name: C:\Downloaded Web Sites\192.168.1.158\images\componenti\1.jpg
+Content Type: image/jpeg
+
+Uri: http://192.168.1.158/images/componenti/autore.png
+File Name: C:\Downloaded Web Sites\192.168.1.158\images\componenti\autore.png
+Content Type: image/png
+
 Uri: http://192.168.1.158/images/componenti/qwe1b.png
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\componenti\qwe1b.png
 Content Type: image/png
+
+Uri: http://192.168.1.158/images/componenti/th.jpeg
+File Name: C:\Downloaded Web Sites\192.168.1.158\images\componenti\th.jpeg
+Content Type: image/jpeg
 
 Uri: http://192.168.1.158/images/copertina-di-facebook776.jpg
 File Name: C:\Downloaded Web Sites\192.168.1.158\images\copertina-di-facebook776.jpg
@@ -150,7 +158,7 @@ Uri: http://192.168.1.158/media/legacy/js/jquery-noconflict.min.js?504da4
 File Name: C:\Downloaded Web Sites\192.168.1.158\media\legacy\js\jquery-noconflict.min.js
 Content Type: text/javascript
 
-Uri: http://192.168.1.158/media/system/css/joomla-fontawesome.min.css?f89ec5
+Uri: http://192.168.1.158/media/system/css/joomla-fontawesome.min.css?e86bb0
 File Name: C:\Downloaded Web Sites\192.168.1.158\media\system\css\joomla-fontawesome.min.css
 Content Type: text/css
 
