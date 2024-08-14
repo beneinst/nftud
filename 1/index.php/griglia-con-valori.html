@@ -28,7 +28,7 @@
 	<style>.logo-image {height:99px;}.logo-image-phone {height:99px;}</style>
 	<style>@media(max-width: 992px) {.logo-image {height: 36px;}.logo-image-phone {height: 36px;}}</style>
 	<style>@media(max-width: 576px) {.logo-image {height: 36px;}.logo-image-phone {height: 36px;}}</style>
-<script type="application/json" class="joomla-script-options new">{"data":{"breakpoints":{"tablet":991,"mobile":480},"header":{"stickyOffset":"100"}},"joomla.jtext":{"ERROR":"Errore","MESSAGE":"Messaggio","NOTICE":"Avviso","WARNING":"Attenzione","JCLOSE":"Chiudi","JOK":"OK","JOPEN":"Apri"},"system.paths":{"root":"","rootFull":"http://192.168.1.145/","base":"","baseFull":"http://192.168.1.145/"},"csrf.token":"ad3738bfbb223da6af6a30e7066d1ec0"}</script>
+<script type="application/json" class="joomla-script-options new">{"data":{"breakpoints":{"tablet":991,"mobile":480},"header":{"stickyOffset":"100"}},"joomla.jtext":{"ERROR":"Errore","MESSAGE":"Messaggio","NOTICE":"Avviso","WARNING":"Attenzione","JCLOSE":"Chiudi","JOK":"OK","JOPEN":"Apri"},"system.paths":{"root":"","rootFull":"http://192.168.1.145/","base":"","baseFull":"http://192.168.1.145/"},"csrf.token":"5b80843586c1dfa3e7a489cea5c3481d"}</script>
 	<script src="../media/system/js/core.min.js?83f2c9"></script>
 	<script src="../media/vendor/jquery/js/jquery.min.js?3.7.1"></script>
 	<script src="../media/legacy/js/jquery-noconflict.min.js?504da4"></script>
@@ -145,8 +145,8 @@
         }
         .custom-grid-map {
             position: relative;
-            width: 1100px;
-            height: 1273px;
+            width: 1000px;
+            height: 1173px;
             margin: auto;
             border: 2px solid #848b79;
             overflow: hidden;
@@ -360,79 +360,90 @@
             });
         }
 
-        function viewMap() {
-            const mapWindow = window.open('', '_blank');
-            mapWindow.document.write(`
-                <html>
-                <head>
-                    <title>Anteprima Mappa</title>
-                    <style>
-                        body { margin: 0; padding: 0; }
-                        .custom-grid-map {
-                            position: relative;
-                            width: 1100px;
-                            height: 1273px;
-                            margin: auto;
-                            border: 2px solid #848b79;
-                        }
-                        .grid-line {
-                            position: absolute;
-                            border-color: #438D80;
-                            border-style: dashed;
-                        }
-                        .grid-line.vertical {
-                            border-width: 0 1px;
-                            top: 0;
-                            bottom: 0;
-                        }
-                        .grid-line.horizontal {
-                            border-width: 1px 0;
-                            left: 0;
-                            right: 0;
-                        }
-                        .label-col, .label-row {
-                            position: absolute;
-                            font-size: 12px;
-                            background: white;
-                            padding: 2px;
-                        }
-                        .label-col {
-                            top: 0;
-                            text-align: center;
-                            width: 30px;
-                        }
-                        .label-row {
-                            left: 0;
-                            text-align: right;
-                            height: 20px;
-                        }
-                        .value-box {
-                            position: absolute;
-                            width: 80px;
-                            height: 40px;
-                            background-color: rgba(255, 255, 255, 0.8);
-                            border: 1px solid #ccc;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-                            font-size: 12px;
-                            transform: translate(-50%, -50%);
-                        }
-                    </style>
-                </head>
-                <body>
-                    <div class="custom-grid-map">
-                        <img src="/images/pianta-italia_ok.jpg" alt="Mappa dell'Italia" style="width:auto;height:100%;">
-                        ${document.getElementById('gridContainer').outerHTML}
-                        ${document.getElementById('labelsContainer').outerHTML}
-                        ${document.getElementById('valuesContainer').outerHTML}
-                    </div>
-                </body>
-                </html>
-            `);
-            mapWindow.document.close();
-        }
+       function viewMap() {
+    // Definisci le dimensioni della finestra
+    const width = 1200;
+    const height = 1300;
+
+    // Calcola la posizione per centrare la finestra
+    const left = (window.screen.width / 2) - (width / 2);
+    const top = (window.screen.height / 2) - (height / 2);
+
+    // Apri una nuova finestra centrata
+    const mapWindow = window.open('', '_blank', `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`);
+
+    mapWindow.document.write(`
+        <html>
+        <head>
+            <title>Anteprima Mappa</title>
+            <style>
+                body { margin: 0; padding: 0; }
+                .custom-grid-map {
+                    position: relative;
+                    width: 1100px;
+                    height: 1273px;
+                    margin: auto;
+                    border: 2px solid #848b79;
+                }
+                .grid-line {
+                    position: absolute;
+                    border-color: #438D80;
+                    border-style: dashed;
+                }
+                .grid-line.vertical {
+                    border-width: 0 1px;
+                    top: 0;
+                    bottom: 0;
+                }
+                .grid-line.horizontal {
+                    border-width: 1px 0;
+                    left: 0;
+                    right: 0;
+                }
+                .label-col, .label-row {
+                    position: absolute;
+                    font-size: 12px;
+                    background: white;
+                    padding: 2px;
+                }
+                .label-col {
+                    top: 0;
+                    text-align: center;
+                    width: 30px;
+                }
+                .label-row {
+                    left: 0;
+                    text-align: right;
+                    height: 20px;
+                }
+                .value-box {
+                    position: absolute;
+                    width: 80px;
+                    height: 40px;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    border: 1px solid #ccc;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 12px;
+                    transform: translate(-50%, -50%);
+                }
+            </style>
+        </head>
+        <body>
+            <div class="custom-grid-map">
+                <img src="/images/pianta-italia_ok.jpg" alt="Mappa dell'Italia" style="width:auto;height:100%;">
+                ${document.getElementById('gridContainer').outerHTML}
+                ${document.getElementById('labelsContainer').outerHTML}
+                ${document.getElementById('valuesContainer').outerHTML}
+            </div>
+        </body>
+        </html>
+    `);
+    mapWindow.document.close();
+}
+
 
         function showAlert(message) {
             document.getElementById('alertMessage').textContent = message;
