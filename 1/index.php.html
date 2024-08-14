@@ -28,7 +28,7 @@
 	<style>.logo-image {height:99px;}.logo-image-phone {height:99px;}</style>
 	<style>@media(max-width: 992px) {.logo-image {height: 36px;}.logo-image-phone {height: 36px;}}</style>
 	<style>@media(max-width: 576px) {.logo-image {height: 36px;}.logo-image-phone {height: 36px;}}</style>
-<script type="application/json" class="joomla-script-options new">{"data":{"breakpoints":{"tablet":991,"mobile":480},"header":{"stickyOffset":"100"}},"joomla.jtext":{"ERROR":"Errore","MESSAGE":"Messaggio","NOTICE":"Avviso","WARNING":"Attenzione","JCLOSE":"Chiudi","JOK":"OK","JOPEN":"Apri"},"system.paths":{"root":"","rootFull":"http://192.168.1.145/","base":"","baseFull":"http://192.168.1.145/"},"csrf.token":"72ba75cf2f8d508088be0525e0651f45"}</script>
+<script type="application/json" class="joomla-script-options new">{"data":{"breakpoints":{"tablet":991,"mobile":480},"header":{"stickyOffset":"100"}},"joomla.jtext":{"ERROR":"Errore","MESSAGE":"Messaggio","NOTICE":"Avviso","WARNING":"Attenzione","JCLOSE":"Chiudi","JOK":"OK","JOPEN":"Apri"},"system.paths":{"root":"","rootFull":"http://192.168.1.145/","base":"","baseFull":"http://192.168.1.145/"},"csrf.token":"9c3ee354229396f2472f9d3dd2d1787a"}</script>
 	<script src="media/system/js/core.min.js?83f2c9"></script>
 	<script src="media/vendor/jquery/js/jquery.min.js?3.7.1"></script>
 	<script src="media/legacy/js/jquery-noconflict.min.js?504da4"></script>
@@ -360,16 +360,12 @@
             });
         }
 
-       function viewMap() {
-    // Definisci le dimensioni della finestra
+     function viewMap() {
     const width = 1100;
     const height = 1200;
-
-    // Calcola la posizione per centrare la finestra
     const left = (window.screen.width / 2) - (width / 2);
     const top = (window.screen.height / 2) - (height / 2);
 
-    // Apri una nuova finestra centrata
     const mapWindow = window.open('', '_blank', `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`);
 
     mapWindow.document.write(`
@@ -433,7 +429,7 @@
         </head>
         <body>
             <div class="custom-grid-map">
-                <img src="https://beneinst.github.io/nftud/1/images/pianta-italia_ok.jpg" alt="pianta-italia_ok.jpg" style="width:auto;height:100%;">
+                <img id="mapImage" src="/images/pianta-italia_ok.jpg" alt="pianta-italia_ok.jpg" style="width:auto;height:100%;">
                 ${document.getElementById('gridContainer').outerHTML}
                 ${document.getElementById('labelsContainer').outerHTML}
                 ${document.getElementById('valuesContainer').outerHTML}
@@ -442,7 +438,18 @@
         </html>
     `);
     mapWindow.document.close();
+
+    // Controlla se l'immagine si è caricata correttamente
+    mapWindow.onload = function() {
+        const img = mapWindow.document.getElementById('mapImage');
+        if (!img.complete || img.naturalWidth === 0) {
+            console.error('Immagine non caricata correttamente.');
+        } else {
+            console.log('Immagine caricata con successo.');
+        }
+    };
 }
+
 
 
         function showAlert(message) {
