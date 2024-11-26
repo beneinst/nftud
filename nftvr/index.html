@@ -76,24 +76,84 @@
 <section id="banner">
     <div class="content">
         <!-- Bandiere per Google Translate -->
-        <div style="text-align: center; margin-bottom: 10px;">
-            <a href="#" onclick="changeLanguage('it')">
-                <img src="https://flagcdn.com/w40/it.png" alt="Italiano" style="width: 30px; margin: 0 8px;">
-            </a>
-            <a href="#" onclick="changeLanguage('en')">
-    <img src="https://flagcdn.com/w40/gb.png" alt="English" style="width: 30px; height: 20.5px; margin: 0 8px;">
-</a>
+      <!-- Google Translate Integration -->
+<style>
+    .language-selector {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .language-selector a {
+        display: inline-block;
+        margin: 0 8px;
+    }
+    .language-selector img {
+        width: 30px;
+        height: auto;
+        transition: transform 0.2s;
+    }
+    .language-selector img:hover {
+        transform: scale(1.1);
+    }
+    #google_translate_element {
+        display: none;
+    }
+</style>
 
-            <a href="#" onclick="changeLanguage('es')">
-                <img src="https://flagcdn.com/w40/es.png" alt="Español" style="width: 30px; margin: 0 8px;">
-            </a>
-            <a href="#" onclick="changeLanguage('fr')">
-                <img src="https://flagcdn.com/w40/fr.png" alt="Français" style="width: 30px; margin: 0 8px;">
-            </a>
-            <a href="#" onclick="changeLanguage('de')">
-                <img src="https://flagcdn.com/w40/de.png" alt="Deutsch" style="width: 30px; height: 20.5px; margin: 0 8px;">
-            </a>
-        </div>
+<!-- Language Selector -->
+<div class="language-selector">
+    <a href="#" onclick="changeLanguage('it')">
+        <img src="https://flagcdn.com/w40/it.png" alt="Italiano">
+    </a>
+    <a href="#" onclick="changeLanguage('en')">
+        <img src="https://flagcdn.com/w40/gb.png" alt="English">
+    </a>
+    <a href="#" onclick="changeLanguage('es')">
+        <img src="https://flagcdn.com/w40/es.png" alt="Español">
+    </a>
+    <a href="#" onclick="changeLanguage('fr')">
+        <img src="https://flagcdn.com/w40/fr.png" alt="Français">
+    </a>
+    <a href="#" onclick="changeLanguage('de')">
+        <img src="https://flagcdn.com/w40/de.png" alt="Deutsch">
+    </a>
+</div>
+
+<!-- Google Translate Element -->
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+    // Funzione per inizializzare Google Translate
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'it',
+            includedLanguages: 'it,en,es,fr,de',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+
+    // Funzione per cambiare lingua
+    function changeLanguage(lang) {
+        const translateElement = document.getElementById('google_translate_element');
+        const select = translateElement.querySelector('.goog-te-combo');
+        
+        if (select) {
+            select.value = lang;
+            select.dispatchEvent(new Event('change'));
+        } else {
+            console.error('Impossibile trovare l\'elemento di selezione della lingua');
+        }
+    }
+
+    // Ricarica la pagina quando la traduzione è completata
+    function translatePageCallback() {
+        // Questo metodo viene chiamato dopo che la traduzione è avvenuta
+        location.reload();
+    }
+</script>
+
+<!-- Script di Google Translate -->
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
         <!-- Titolo e sottotitolo -->
         <h2>Benvenuti su Beneinst.Blockchain</h2>
