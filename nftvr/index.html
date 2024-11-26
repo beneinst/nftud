@@ -38,124 +38,30 @@
 				</nav>
 
 			<!-- Banner -->
-			<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({ pageLanguage: 'it' }, 'google_translate_element');
-  }
-
-  function changeLanguage(lang) {
-    let attempts = 0; // Numero di tentativi effettuati
-    const maxAttempts = 20; // Numero massimo di tentativi (10 secondi)
-    const interval = setInterval(() => {
-      const iframe = document.querySelector('iframe.goog-te-banner-frame');
-      if (iframe) {
-        const iframeDoc = iframe.contentWindow.document || iframe.contentDocument;
-        const menuFrame = iframeDoc.querySelector('.goog-te-menu-frame');
-        if (menuFrame) {
-          const menuDoc = menuFrame.contentDocument || menuFrame;
-          const langOption = menuDoc.querySelector(`[value="${lang}"]`);
-          if (langOption) {
-            langOption.click();
-            clearInterval(interval);
-          } else {
-            console.error(`Lingua ${lang} non trovata.`);
-            clearInterval(interval);
-          }
-        }
-      }
-      attempts++;
-      if (attempts >= maxAttempts) {
-        alert("Google Translate non è ancora pronto. Riprova più tardi.");
-        clearInterval(interval);
-      }
-    }, 500); // Controlla ogni 500ms
-  }
-</script>
-<script async type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <section id="banner">
     <div class="content">
         <!-- Bandiere per Google Translate -->
-      <!-- Google Translate Integration -->
-<style>
-    .language-selector {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .language-selector a {
-        display: inline-block;
-        margin: 0 8px;
-    }
-    .language-selector img {
-        width: 30px;
-        height: auto;
-        transition: transform 0.2s;
-    }
-    .language-selector img:hover {
-        transform: scale(1.1);
-    }
-    #google_translate_element {
-        display: none;
-    }
-</style>
+        <div style="text-align: center; margin-bottom: 10px;">
+            <a href="#" onclick="changeLanguage('it')" class="flag-link">
+                <img src="https://flagcdn.com/w40/it.png" alt="Italiano" style="width: 30px; margin: 0 6px;">
+            </a>
+            <a href="#" onclick="changeLanguage('en')" class="flag-link">
+    <img src="https://flagcdn.com/w40/gb.png" alt="English" style="width: 30px; height: 20.5px; margin: 0 6px;">
+</a>
 
-<!-- Language Selector -->
-<div class="language-selector">
-    <a href="#" onclick="changeLanguage('it')">
-        <img src="https://flagcdn.com/w40/it.png" alt="Italiano">
-    </a>
-    <a href="#" onclick="changeLanguage('en')">
-        <img src="https://flagcdn.com/w40/gb.png" alt="English">
-    </a>
-    <a href="#" onclick="changeLanguage('es')">
-        <img src="https://flagcdn.com/w40/es.png" alt="Español">
-    </a>
-    <a href="#" onclick="changeLanguage('fr')">
-        <img src="https://flagcdn.com/w40/fr.png" alt="Français">
-    </a>
-    <a href="#" onclick="changeLanguage('de')">
-        <img src="https://flagcdn.com/w40/de.png" alt="Deutsch">
-    </a>
-</div>
-
-<!-- Google Translate Element -->
-<div id="google_translate_element"></div>
-
-<script type="text/javascript">
-    // Funzione per inizializzare Google Translate
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'it',
-            includedLanguages: 'it,en,es,fr,de',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, 'google_translate_element');
-    }
-
-    // Funzione per cambiare lingua
-    function changeLanguage(lang) {
-        const translateElement = document.getElementById('google_translate_element');
-        const select = translateElement.querySelector('.goog-te-combo');
-        
-        if (select) {
-            select.value = lang;
-            select.dispatchEvent(new Event('change'));
-        } else {
-            console.error('Impossibile trovare l\'elemento di selezione della lingua');
-        }
-    }
-
-    // Ricarica la pagina quando la traduzione è completata
-    function translatePageCallback() {
-        // Questo metodo viene chiamato dopo che la traduzione è avvenuta
-        location.reload();
-    }
-</script>
-
-<!-- Script di Google Translate -->
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            <a href="#" onclick="changeLanguage('es')" class="flag-link">
+                <img src="https://flagcdn.com/w40/es.png" alt="Español" style="width: 30px; margin: 0 6px;">
+            </a>
+            <a href="#" onclick="changeLanguage('fr')" class="flag-link">
+                <img src="https://flagcdn.com/w40/fr.png" alt="Français" style="width: 30px; margin: 0 6px;">
+            </a>
+            <a href="#" onclick="changeLanguage('de')" class="flag-link">
+                <img src="https://flagcdn.com/w40/de.png" alt="Deutsch" style="width: 30px; height: 20.5px; margin: 0 6px;">
+            </a>
+        </div>
 
         <!-- Titolo e sottotitolo -->
+		<p></p>
         <h2>Benvenuti su Beneinst.Blockchain</h2>
         <p>Esplora l'arte e le riflessioni del futuro, custodite per sempre nella rete decentralizzata di Polygon</p>
         <a href="#main" class="button scrolly">Pronti? Andiamo!</a>
@@ -422,6 +328,10 @@
     height: 30px; /* Imposta un'altezza fissa */
     margin: 0 5px;
   }
+  .flag-link {
+                text-decoration: none; /* Rimuove il sottolineato dei link */
+                display: inline-block;
+            }
 </style>
 
 
