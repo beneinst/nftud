@@ -43,19 +43,20 @@
         <!-- Bandiere per Google Translate -->
         <div style="text-align: center; margin-bottom: 10px;">
             <a href="#" onclick="changeLanguage('it')">
-                <img src="https://flagcdn.com/w40/it.png" alt="Italiano" style="width: 30px; margin: 0 5px;">
+                <img src="https://flagcdn.com/w40/it.png" alt="Italiano" style="width: 30px; margin: 0 8px;">
             </a>
             <a href="#" onclick="changeLanguage('en')">
-                <img src="https://flagcdn.com/w40/gb.png" alt="English" style="width: 30px; margin: 0 5px;">
-            </a>
+    <img src="https://flagcdn.com/w40/gb.png" alt="English" style="width: 30px; height: 21px; margin: 0 8px;">
+</a>
+
             <a href="#" onclick="changeLanguage('es')">
-                <img src="https://flagcdn.com/w40/es.png" alt="Español" style="width: 30px; margin: 0 5px;">
+                <img src="https://flagcdn.com/w40/es.png" alt="Español" style="width: 30px; margin: 0 8px;">
             </a>
             <a href="#" onclick="changeLanguage('fr')">
-                <img src="https://flagcdn.com/w40/fr.png" alt="Français" style="width: 30px; margin: 0 5px;">
+                <img src="https://flagcdn.com/w40/fr.png" alt="Français" style="width: 30px; margin: 0 8px;">
             </a>
             <a href="#" onclick="changeLanguage('de')">
-                <img src="https://flagcdn.com/w40/de.png" alt="Deutsch" style="width: 30px; margin: 0 5px;">
+                <img src="https://flagcdn.com/w40/de.png" alt="Deutsch" style="width: 30px; height: 21px; margin: 0 8px;">
             </a>
         </div>
 
@@ -323,16 +324,35 @@
   }
 
   function changeLanguage(lang) {
-    var iframe = document.querySelector('iframe.goog-te-banner-frame');
-    if (!iframe) {
-      alert("Google Translate non è ancora pronto. Riprova tra qualche secondo.");
-      return;
-    }
-    var doc = iframe.contentWindow.document || iframe.contentDocument;
-    doc.querySelector('.goog-te-menu-frame').contentDocument.querySelector(`[value="${lang}"]`).click();
+    let attempts = 0;
+    const maxAttempts = 10; // Numero massimo di tentativi
+    const interval = setInterval(() => {
+      const iframe = document.querySelector('iframe.goog-te-banner-frame');
+      if (iframe) {
+        const doc = iframe.contentWindow.document || iframe.contentDocument;
+        const menuFrame = doc.querySelector('.goog-te-menu-frame');
+        if (menuFrame) {
+          const menuDoc = menuFrame.contentDocument;
+          const langOption = menuDoc.querySelector(`[value="${lang}"]`);
+          if (langOption) {
+            langOption.click();
+            clearInterval(interval); // Interrompe il controllo
+          } else {
+            alert("Opzione lingua non trovata.");
+            clearInterval(interval);
+          }
+        }
+      }
+      attempts++;
+      if (attempts >= maxAttempts) {
+        alert("Google Translate non è pronto. Riprova tra qualche secondo.");
+        clearInterval(interval);
+      }
+    }, 500); // Controllo ogni 500ms
   }
 </script>
 <script async type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <style>
   .flag-icon {
     display: inline-block;
