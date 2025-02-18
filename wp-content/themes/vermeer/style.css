@@ -1,0 +1,81 @@
+/*
+Theme Name: Vermeer
+Text Domain: vermeer
+Version: 1.0.5
+Description: Vermeer is a profile theme with a unique design and eye-grabbing marquee effect. Add a photograph, a short bio and your links, and your profile page is ready to go. It has 13 different built-in theme styles, and fonts and colors are easy to modify in the WordPress Site Editor. Demo: https://vermeer.andersnoren.se
+Tags: custom-colors, custom-menu, editor-style, featured-images, full-site-editing, block-patterns, translation-ready, wide-blocks, block-styles, style-variations, portfolio
+Author: Anders Norén
+Author URI: https://andersnoren.se
+Theme URI: https://andersnoren.se/teman/vermeer-wordpress-theme/
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Requires at least: 6.5
+Requires PHP: 7.4
+Tested up to: 6.6
+*/
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	background-attachment: fixed;
+}
+
+a {
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.2em;
+}
+
+:root :where(.wp-site-blocks) > * {
+	margin-block-start: 0;
+}
+
+@supports (min-height: 100dvh) {
+	[style*="min-height:100vh"] {
+		min-height: calc( 100dvh - var( --wp-admin--admin-bar--height, 0px ) ) !important;
+	}
+}
+
+/* HELPER CLASSES */
+
+.hide-empty:not( :has( > * ) ) {
+	display: none;
+}
+
+@media ( max-width: 781px ) {
+	.wp-block-columns:not(.is-not-stacked-on-mobile) .hide-when-colums-are-stacked {
+		display: none !important;
+	}
+}
+
+
+/* TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.has-huge-title-font-size {
+	font-feature-settings: 'ss02' on, 'ss03' on;
+}
+
+.has-huge-title-font-size {
+	letter-spacing: -0.05em;
+}
+
+/* TEMPLATE PART: HEADER */
+
+body:not(.editor-styles-wrapper) .vermeer-is-fixed-title-header {
+	mix-blend-mode: exclusion;
+	position: fixed;
+		left: 0;
+		right: 0;
+		top: var( --wp-admin--admin-bar--height, 0px );
+	z-index: 11;
+}
+
+/* TEMPLATE PART: FOOTER */
+
+.theme-author-credit a { text-decoration: none; }
+.theme-author-credit a:hover { text-decoration: underline; }
