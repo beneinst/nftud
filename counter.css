@@ -1,0 +1,15 @@
+#counter-container {
+    background-color: #131316;
+    color: white;
+    font-family: sans-serif;
+    padding: 6px;
+    border-radius: 5px;
+    /* Allinea a sinistra */
+    text-align: left;
+}
+
+#counter {
+    font-size: 0.95em;
+	margin-top: 0; 
+    margin-bottom: 0; /* Rimosso margin-bottom, non necessario ora */
+}
